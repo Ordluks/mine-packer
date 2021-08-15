@@ -1,11 +1,11 @@
 import json
-from mine_packer.versions.v1_17.content_types import __ContentTypes as ContentTypes
-from mine_packer.versions.v1_17.game_content import __GameContent as GameContent
+from mine_packer.versions.v1_17.game_register.content_types import __ContentTypes as ContentTypes
+from mine_packer.versions.v1_17.game_register.game_content import __GameContent as GameContent
 
 
 class GameRegister:
     def __init__(self):
-        register_file = open('mine_packer/versions/v1_17/register.json', 'r')
+        register_file = open('mine_packer/versions/v1_17/game_register/register.json', 'r')
         register_data = json.loads(register_file.read().replace('minecraft:', ''))
 
         self.content_types = ContentTypes()
