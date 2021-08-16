@@ -8,6 +8,7 @@ MinePacker = {
 
 game_register = None
 object_model = None
+builder = None
 
 
 def mp_init(minecraft_version=LAST_MC_VER):
@@ -18,3 +19,6 @@ def mp_init(minecraft_version=LAST_MC_VER):
 
     global object_model
     object_model = mp.object_model
+
+    global builder
+    builder = mp.builder

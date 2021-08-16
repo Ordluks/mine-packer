@@ -14,3 +14,6 @@ class Datapack:
 
     def add_namespace(self, namespace):
         self.__namespaces.append(namespace)
+
+    def get_namespaces(self):
+        return self.__namespaces
