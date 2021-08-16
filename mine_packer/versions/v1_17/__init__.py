@@ -1,4 +1,5 @@
-from mine_packer.versions.v1_17.game_register.register import GameRegister
+from mine_packer.versions.v1_17.game_register.game_register import GameRegister
+from mine_packer.versions.v1_17.object_model.object_model import ObjectModel
 
 
 class Version:
@@ -6,4 +7,4 @@ class Version:
         'pack_format': 7
     }
     game_register = GameRegister()
-    object_model = None
+    object_model = ObjectModel()

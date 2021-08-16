@@ -1,4 +1,4 @@
-class __ContentTypes:
+class ContentTypes:
     item = 'ITEM'
     block = 'BLOCK'
     fluid = 'FLUID'

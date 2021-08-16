@@ -1,4 +1,4 @@
-{
+data = """{
   "minecraft:game_event": {
     "default": "minecraft:step",
     "protocol_id": 0,
@@ -13002,4 +13002,4 @@
       }
     }
   }
-}
+}""".replace('minecraft:', '')
