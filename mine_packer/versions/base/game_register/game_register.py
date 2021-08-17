@@ -1,12 +1,14 @@
 import json
-from mine_packer.versions.v1_17.game_register.content_types import ContentTypes
-from mine_packer.versions.v1_17.game_register.game_content import GameContent
-from mine_packer.versions.v1_17.game_register.register_data import data
+from mine_packer.versions.base.game_register.content_types import ContentTypes
+from mine_packer.versions.base.game_register.game_content import GameContent
 
 
 class GameRegister:
-    def __init__(self):
-        register_data = json.loads(data)
+    def __init__(self, register_data):
+        if register_data is None:
+            return
+
+        register_data = json.loads(register_data)
 
         self.content_types = ContentTypes()
 

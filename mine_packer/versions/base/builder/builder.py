@@ -6,6 +6,9 @@ class Builder:
         self.__build_config = config
 
     def build(self, pack):
+        if self.__build_config is None:
+            return
+
         output_dir = 'build'
 
         path_datapack = os.path.join(output_dir, pack.name)
@@ -17,8 +20,9 @@ class Builder:
         # create mcmeta
         mcmeta = {
             'pack': {
+                'pack_format': self.__build_config['pack_format'],
                 'description': pack.description,
-                'pack_format': self.__build_config['pack_format']
+                'credits': f'Created by with Mine Packer'
             }
         }
 
